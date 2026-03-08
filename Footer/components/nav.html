@@ -1,0 +1,50 @@
+<!-- =============================================
+     NAV COMPONENT
+     ============================================= -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <div class="nav__inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav__logo">
+        <svg class="nav__logo-icon" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="40" height="40" rx="2" stroke="#C9A96E" stroke-width="1"/>
+          <path d="M21 8 C21 8 14 15 14 22 C14 26.4 17.1 30 21 30 C24.9 30 28 26.4 28 22 C28 15 21 8 21 8Z" 
+                stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+          <path d="M14 30 L14 36 M28 30 L28 36" stroke="#C9A96E" stroke-width="1.2"/>
+          <path d="M14 33 L28 33" stroke="#C9A96E" stroke-width="1"/>
+        </svg>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">Longlands Park</span>
+          <span class="nav__logo-sub">Gated Residential Estates</span>
+        </div>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links">
+        <li><a href="#about"      class="nav__link">About</a></li>
+        <li><a href="#features"   class="nav__link">Amenities</a></li>
+        <li><a href="#masterplan" class="nav__link">Masterplan</a></li>
+        <li><a href="#costs"      class="nav__link">Investment</a></li>
+        <li><a href="#team"       class="nav__link">Team</a></li>
+      </ul>
+
+      <a href="#contact" class="nav__cta">Enquire Now</a>
+
+      <!-- Hamburger -->
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="nav__mobile-menu" id="mobileMenu">
+      <a href="#about"      onclick="closeMobileMenu()">About</a>
+      <a href="#features"   onclick="closeMobileMenu()">Amenities</a>
+      <a href="#masterplan" onclick="closeMobileMenu()">Masterplan</a>
+      <a href="#costs"      onclick="closeMobileMenu()">Investment</a>
+      <a href="#team"       onclick="closeMobileMenu()">Team</a>
+      <a href="#contact"    onclick="closeMobileMenu()">Contact</a>
+    </div>
+  </div>
+</nav>

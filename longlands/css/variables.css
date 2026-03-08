@@ -1,0 +1,114 @@
+/* =============================================
+   LONGLANDS PARK — CSS VARIABLES & RESET
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+:root {
+  /* Colour Palette — drawn from the brochure */
+  --gold:         #C9A96E;
+  --gold-light:   #E8D5A3;
+  --gold-dark:    #9A7840;
+  --green-dark:   #1A3028;
+  --green-mid:    #2B4A38;
+  --green-light:  #3D6350;
+  --navy:         #1C2535;
+  --navy-mid:     #253040;
+  --cream:        #F5EFE0;
+  --cream-light:  #FBF8F2;
+  --brown-warm:   #4A3525;
+  --white:        #FFFFFF;
+  --black:        #0D0D0D;
+  --text-muted:   rgba(245,239,224,0.65);
+
+  /* Typography */
+  --font-primary:  'Montserrat', sans-serif;
+  --font-display:  'Cormorant Garamond', serif;
+
+  /* Spacing */
+  --section-pad: clamp(80px, 10vw, 140px);
+  --container:   1280px;
+
+  /* Transitions */
+  --ease:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--cream-light);
+  color: var(--navy);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a  { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px);
+}
+
+.section-label {
+  font-family: var(--font-primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--green-dark);
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--gold-dark);
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin: 24px 0 36px;
+}
+.nav__cta{
+    color: white;
+}
+
+/* Scroll reveal utility — only hidden when JS is active (js-loaded class on body) */
+.js-loaded .reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.js-loaded .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Without JS, everything is visible by default */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
